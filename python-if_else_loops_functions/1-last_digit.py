@@ -5,6 +5,7 @@ digit = repr(number)
 last_digitstr = digit[-1]
 last_digit = int(last_digitstr)
 
+last_digit = -last_digit if digit[0] == '-' else last_digit
 
 if number:
     print(f'Last digit of {number} is {last_digit} ', end='')
