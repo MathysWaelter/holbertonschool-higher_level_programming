@@ -7,13 +7,14 @@ last_digit = int(last_digitstr)
 
 last_digit = -last_digit if digit[0] == '-' else last_digit
 
+if number == 0:
+    print(f'Last digit of {number} is {last_digit} and is 0')
+
 if number:
     print(f'Last digit of {number} is {last_digit} ', end='')
     if last_digit > 5:
         print('and is greater than 5')
     elif last_digit == 0:
         print('and is 0')
-    elif number == 0:
-        print(f'Last digit of {number} is {last_digit} ', end='')
     else:
         print('and is less than 6 and not 0')
