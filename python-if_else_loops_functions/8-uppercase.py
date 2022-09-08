@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-def uppercase(str):
-    upper = ''
-    for i in range(len(str)):
-        if (str[i] >= 'a' and str[i] <= 'z'):
-            upper = upper = + chr((ord(str[i]) - 32))
-            print("{}".format(chr(upper)), end='')
+def islower(c):
+    for i in range(97, 123):
+        if i == ord(c):
+            return 1
         else:
-            upper = upper + str[i]
-            print("{}".format(chr(upper)), end='')
+            return 0
+
+def uppercase(str):
+    for i in str:
+        print("{:c}".format(ord(i) if not islower(i) else ord(i) - 32), end='')
+    print('')
+	
