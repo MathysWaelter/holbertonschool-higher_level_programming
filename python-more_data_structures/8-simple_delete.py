@@ -4,5 +4,4 @@ def simple_delete(a_dictionary, key=""):
         if i == key:
             del a_dictionary[key]
             break
-	
     return a_dictionary
