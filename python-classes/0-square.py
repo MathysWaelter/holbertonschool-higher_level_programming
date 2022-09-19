@@ -3,6 +3,7 @@
     function to create square
 """
 
+
 class Square:
     """
     Square:
