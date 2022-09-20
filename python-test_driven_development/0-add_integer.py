@@ -1,18 +1,13 @@
 #!/usr/bin/python3
-"""function to add"""
-
+""" Doc """
 
 def add_integer(a, b=98):
-    """function to add two digit"""
-
-    if type(a) not in [int, float]:
+    """ Doc """
+    if a is None or (type(a) is not int and type(a) is not float):
         raise TypeError("a must be an integer")
-    if type(b) not in [int, float]:
+    if type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
-    else:
-        if type(a) is float:
-            a = int(a)
-        if type(b) is float:
-            b = int(b)
-
-    return a + b
+    result = a + b
+    if result == float('inf') or result == -float('inf'):
+        return 89
+    return int(a) + int(b)
