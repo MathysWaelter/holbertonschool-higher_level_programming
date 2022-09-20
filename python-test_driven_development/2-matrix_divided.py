@@ -17,7 +17,7 @@ def matrix_divided(matrix, div):
     i = 0
     for a in matrix:
         if len(a) == size_0:
-            b = + 1
+            b += 1
         i += 1
     if b != i:
         raise TypeError("Each row of the matrix must have the same size")
