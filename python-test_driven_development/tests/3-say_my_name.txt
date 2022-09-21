@@ -5,11 +5,11 @@ My name is John Smith
 
 >>> say_my_name("John", 3)
 Traceback (most recent call last):
-TypeError: first_name must be a string
+TypeError: last_name must be a string
 
 >>> say_my_name(3, "Smith")
 Traceback (most recent call last):
-TypeError: last_name must be a string
+TypeError: first_name must be a string
 
 >>> say_my_name()
 Traceback (most recent call last):
