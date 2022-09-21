@@ -2,7 +2,6 @@
 """
     function to create square
 """
-from ast import Raise
 
 
 def print_square(size):
