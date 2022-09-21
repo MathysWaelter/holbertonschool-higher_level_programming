@@ -18,6 +18,6 @@ def print_square(size):
             print()
             for space in range(size):
                  print("#", end="")
+            print()
     elif size < 0:
-        print()
         raise ValueError("size must be >= 0")
