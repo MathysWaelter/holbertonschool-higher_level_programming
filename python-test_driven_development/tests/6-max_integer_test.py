@@ -1,13 +1,29 @@
 #!/usr/bin/python3
+"""
+Unittest for max_integer([..])
+"""
+
+
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
-    def test_max(self):
-        self.assertEqual(max_integer([1, 2, 3, 4]), 4)
-        self.assertEqual(max_integer([4, 2, 8, 6]), 8)
-        self.assertEqual(max_integer([10, 2, 8, 6]), 10)
-        self.assertEqual(max_integer([4, 2, -8, 6]), 6)
-        self.assertEqual(max_integer([-4, -2, -8, -6]), -2)
-        self.assertEqual(max_integer([4]), 4)
+
+    def basic_test(self):
+        self.assertEqual(max_integer([2, 9, 1]), 9)
+
+    def negative_test(self):
+        self.assertEqual(max_integer([-5, -9, -11]), -5)
+
+    def empty_test(self):
         self.assertEqual(max_integer([]), None)
+
+    def basic_negative_test(self):
+        self.assertEqual(max_integer([2, 3, 5, -11, 666]), 666)
+
+    def float_test(self):
+        self.assertEqual(max_integer([4, 7, 3, 7.8]), 7.8)
+
+    def single_test(self):
+        self.assertEqual(max_integer([8]), 8)
