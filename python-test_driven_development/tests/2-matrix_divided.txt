@@ -1,4 +1,4 @@
-matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 =================================
 Declare Matrix
@@ -8,9 +8,8 @@ Declare Matrix
 
 >>> matrix2 = [[1, 2, 3], [4 , 5]]
 
->>> matrix3 = [[1, 2, 3], [4 , 5 , 'hello']]
+>>> matrix3 = [[1, 2, 3], [4 , 5 , 'h']]
 
->>> matrix4 = [[1, 2, 3], ['hello']]
 
 =================================
 Try With Function
