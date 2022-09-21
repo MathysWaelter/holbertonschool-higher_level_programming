@@ -1,1 +1,26 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Indentation with string test")
+Indentation with string test
+
+    -   -   -
+
+>>> text_indentation(666)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+    -   -   -
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    -   -   -
+
+>>> text_indentation("Test with dot. Test with double dot: Test with interrogation point?")
+Test with dot.
+<BLANKLINE>
+Test with double dot:
+<BLANKLINE>
+Test with interrogation point?
+<BLANKLINE>
