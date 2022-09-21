@@ -3,11 +3,11 @@
 """
 
 
-from typing import Type
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
+    """TestMaxInteger"""
     def basic_test(self):
         self.assertEqual(max_integer([2, 9, 6, 1]), 9)
 
@@ -26,6 +26,3 @@ class TestMaxInteger(unittest.TestCase):
     def char_test(self):
         with self.assertRaises(TypeError):
             max_integer([9, 6, 'r'])
-
-if __name__ == '__main__':
-    unittest.main()
