@@ -13,4 +13,4 @@ def text_indentation(text):
     backline = newstr.split("\n")
     for i in range(len(backline)):
         print("{}".format(backline[i].strip()),
-            end=("" if (i == (len(backline) -1)) else '\n'))
+              end=("" if (i == (len(backline)-1)) else '\n'))
