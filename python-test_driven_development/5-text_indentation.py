@@ -4,11 +4,14 @@
 
 def text_indentation(text):
     """checker"""
+    i = 0
+    newchar = ":?."
     if type(text) is not str or text != text:
         raise TypeError("text must be a string")
-    if text:
-        text = text.replace('.', '.\n\n')
-        text = text.replace('?', '?\n\n')
-        text = text.replace(':', ':\n\n')
-    print(text)
-    
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] in newchar:
+            print("\n")
+            i = i + 2
+        else:
+            i = i + 1
