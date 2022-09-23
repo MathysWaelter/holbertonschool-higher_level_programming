@@ -4,9 +4,6 @@
 """
 
 
-from turtle import width
-
-
 class Rectangle:
     """
     Square:
