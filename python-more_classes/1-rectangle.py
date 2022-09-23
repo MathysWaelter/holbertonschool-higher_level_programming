@@ -15,15 +15,15 @@ class Rectangle:
         self.height = height
 
     @property
-    def __width(self):
+    def width(self):
         """
         :param value:
             value for define a square
         """
         return self.__width
 
-    @__width.setter
-    def __width(self, value):
+    @width.setter
+    def width(self, value):
         """
         :param value:
             value for width of a square
@@ -35,15 +35,15 @@ class Rectangle:
         self.__width = value
 
     @property
-    def __height(self):
+    def height(self):
         """
         :param value:
             value for define a square
         """
         return self.__height
 
-    @__height.setter
-    def __height(self, value):
+    @height.setter
+    def height(self, value):
         """
         :param value:
             value for height of a square
