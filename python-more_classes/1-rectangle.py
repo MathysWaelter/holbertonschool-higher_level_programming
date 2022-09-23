@@ -22,8 +22,12 @@ class Rectangle:
         """
         return self.__width
 
-    @width.setter
+    @__width.setter
     def __width(self, value):
+        """
+        :param value:
+            value for width of a square
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -38,8 +42,12 @@ class Rectangle:
         """
         return self.__height
 
-    @height.setter
+    @__height.setter
     def __height(self, value):
+        """
+        :param value:
+            value for height of a square
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
