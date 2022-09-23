@@ -17,11 +17,12 @@ class Rectangle:
     def __str__(self):
         rect = ""
         if self.width == 0 or self.height == 0:
-            print()
+            return ""
         for i in range(self.height):
             for j in range(self.width):
                 rect += '#'
-            rect += '\n'
+            if i < self.height - 1:
+                rect += '\n'
         return rect
 
     def area(self):
