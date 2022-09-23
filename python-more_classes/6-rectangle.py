@@ -4,9 +4,6 @@
 """
 
 
-from curses.textpad import rectangle
-
-
 class Rectangle:
     """
     Square:
