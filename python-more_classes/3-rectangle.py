@@ -4,9 +4,6 @@
 """
 
 
-from re import X
-
-
 class Rectangle:
     """
     Square:
