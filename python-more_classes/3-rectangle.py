@@ -24,16 +24,6 @@ class Rectangle:
             rect += '\n'
         return rect
 
-    def __repr__(self):
-        rect = ""
-        if self.width == 0 or self.height == 0:
-            print()
-        for i in range(self.height):
-            for j in range(self.width):
-                rect += '#'
-            rect += '\n'
-        return rect
-
     def area(self):
         """
         :param value:
