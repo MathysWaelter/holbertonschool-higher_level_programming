@@ -4,7 +4,7 @@
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     list of int
     """
@@ -14,4 +14,4 @@ class Mylist(list):
         for sort
         """
 
-        return (sorted(self))
+        print(sorted(self))
