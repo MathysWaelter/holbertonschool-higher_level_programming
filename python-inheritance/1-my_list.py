@@ -2,8 +2,10 @@
 """func for inherits another class"""
 
 
-class list:
-    """list of int"""
+class Mylist(list):
+    """
+    list of int
+    """
 
     def print_sorted(self):
         """for sort"""
