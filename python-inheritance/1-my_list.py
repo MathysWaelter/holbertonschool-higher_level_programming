@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""func for inherits another class"""
+"""
+    func for inherits another class
+"""
 
 
 class Mylist(list):
@@ -8,5 +10,8 @@ class Mylist(list):
     """
 
     def print_sorted(self):
-        """for sort"""
+        """
+        for sort
+        """
+
         return (sorted(self))
