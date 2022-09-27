@@ -21,7 +21,9 @@ BASIC TEST
 [-1, 1, 2, 3, 4]
 
 (NEW LIST)
->>> new_list = [-1, 1, 2, 3, 4]
+>>> new_list = MyList([-1, 1, 2, 3, 4])
+>>> new_list.print_sorted()
+[-1, 1, 2, 3, 4]
 >>> print(my_list is new_list)
 False
 
