@@ -4,7 +4,7 @@
 
 def inherits_from(obj, a_class):
     """define true of false"""
-    if type(obj) == a_class:
+    if type(obj) == a_class or not isinstance(obj, a_class):
         return False
     else:
         return True
