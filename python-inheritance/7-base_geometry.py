@@ -5,10 +5,6 @@
 class BaseGeometry:
     """Class for print a bass geometry"""
 
-    def __init__(self, name='', value=0):
-        self.name = name
-        self.value = value
-
     def area(self):
         """method for return area"""
         raise Exception("area() is not implemented")
