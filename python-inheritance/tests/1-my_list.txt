@@ -21,9 +21,8 @@ BASIC TEST
 [-1, 1, 2, 3, 4]
 
 (NEW LIST)
->>> my_list.print_sorted()
 >>> new_list = [-1, 1, 2, 3, 4]
->>> my_list is new_list
+>>> print(my_list is new_list)
 False
 
 (INHERIT TEST)
