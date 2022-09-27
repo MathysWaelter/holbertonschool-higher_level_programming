@@ -16,13 +16,12 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{:s} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """Class for print a rectangle"""
 
     def __init__(self, width, height):
         self.__width = width
         self.__height = height
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
