@@ -8,5 +8,5 @@ import json
 def load_from_json_file(filename):
     """load function"""
     with open(filename, 'r') as filejson:
-        object = json.dumps(filejson)
+        object = json.load(filejson)
     print(object)
