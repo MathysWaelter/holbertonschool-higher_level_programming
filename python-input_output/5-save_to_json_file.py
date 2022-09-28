@@ -8,5 +8,5 @@ import json
 def save_to_json_file(my_obj, filename):
     """write and return"""
     JsonStr = json.dumps(my_obj)
-    JsonFile = open(filename, 'w')
-    JsonFile.write(JsonStr)
+    with open (filename, 'w') as JsonFile:
+        JsonFile.write(JsonStr)
