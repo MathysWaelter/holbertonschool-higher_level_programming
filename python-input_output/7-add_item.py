@@ -2,11 +2,16 @@
 """function to save JSON file"""
 
 
-import json
+import sys
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 
+if __name__ == '__main__':
+    try:
+        jsonfile = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        jsonfile = []
 
-def save_to_json_file(my_obj, filename):
-    """write an object to text file"""
-
-    with open(filename, mode='w', encoding="utf-8") as jsonfile:
-        jsonfile.write(json.dumps(my_obj))
+    for i in range(1, len(sys.argv)):
+        jsonfile.append(sys.argv[i])
+    save_to_json_file(jsonfile, "add_item.json")
