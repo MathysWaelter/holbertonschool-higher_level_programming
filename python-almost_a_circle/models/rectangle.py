@@ -40,6 +40,17 @@ class Rectangle(Base):
         """function for return the area of rectangle"""
         return self.__width * self.__height
 
+    def display(self):
+        rect = ""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                rect += '#'
+            if i < self.__height - 1:
+                rect += '\n'
+        print(rect)
+
     @property
     def width(self):
         """
