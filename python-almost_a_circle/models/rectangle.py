@@ -42,15 +42,18 @@ class Rectangle(Base):
 
     def display(self):
         """function for display rectangle"""
-        rect = ""
         if self.__width == 0 or self.__height == 0:
             return ""
+        for x in range(self.__y):
+            print("")
         for i in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
             for j in range(self.__width):
-                rect += '#'
+                print('#', end='')
             if i < self.__height - 1:
-                rect += '\n'
-        print(rect)
+                print()
+        print()
 
     def __str__(self):
         """function for display size of rectangle"""
