@@ -9,5 +9,6 @@ class Base:
     def __init__(self, id=None):
         if id is not None:
             self.id = id
+            type(Base).id += 1
         else:
-            __nb_objects += 1
+            type(Base).__nb_objects += 1
