@@ -2,7 +2,6 @@
 """define a new class rectangle inherits form Base"""
 
 
-from turtle import width
 from models.base import Base
 
 
@@ -22,11 +21,11 @@ class Rectangle(Base):
             self.id = Rectangle.__nb_objects
         if type(width) != int:
             raise TypeError("width must be an integer")
-        if width < 0:
+        if width <= 0:
             raise ValueError("width must be >= 0")
         if type(height) != int:
             raise TypeError("height must be an integer")
-        if height < 0:
+        if height <= 0:
             raise ValueError("height must be >= 0")
         if type(x) != int:
             raise TypeError("x must be an integer")
@@ -54,8 +53,9 @@ class Rectangle(Base):
         """
         if type(value) != int:
             raise TypeError("width must be an integer")
-        if width < 0:
+        if value <= 0:
             raise ValueError("width must be >= 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -73,7 +73,7 @@ class Rectangle(Base):
         """
         if type(value) != int:
             raise TypeError("height must be an integer")
-        if value < 0:
+        if value <= 0:
             raise ValueError("height must be >= 0")
         self.__height = value
 
