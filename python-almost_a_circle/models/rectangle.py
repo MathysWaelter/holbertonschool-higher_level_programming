@@ -19,7 +19,6 @@ class Rectangle(Base):
         else:
             type(self).__nb_objects += 1
             self.id = Rectangle.__nb_objects
-        
 
     @property
     def width(self):
