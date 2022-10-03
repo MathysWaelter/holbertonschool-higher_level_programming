@@ -41,6 +41,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """function for display rectangle"""
         rect = ""
         if self.__width == 0 or self.__height == 0:
             return ""
