@@ -61,24 +61,17 @@ class Rectangle(Base):
         return("[Rectangle] ({}) {}/{} - {}/{}".format
                (self.id, self.__x, self.__y, self.__width, self.__height))
 
-    def define_update(self, id=None, width=None, height=None, x=None, y=None):
-        """args assignment"""
-        if id is not None:
-            self.id == id
-        if width is not None:
-            self.width == width
-        if height is not None:
-            self.height == height
-        if x is not None:
-            self.x == x
-        if y is not None:
-            self.y == y
-
     def update(self, *args):
-        """assign an argument to each attribute with define_update function"""
-        if args:
-            self.define_update(*args)
-
+        """assign all args"""
+        if len(args) > 0:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except:
+                pass
     @property
     def width(self):
         """
