@@ -61,7 +61,7 @@ class Rectangle(Base):
         return("[Rectangle] ({}) {}/{} - {}/{}".format
                (self.id, self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assign all args"""
         if len(args) > 0:
             try:
@@ -72,6 +72,17 @@ class Rectangle(Base):
                 self.y = args[4]
             except:
                 pass
+        else:
+            if 'id' in kwargs:
+                self.id == kwargs['id']
+            if 'width' in kwargs:
+                self.width == kwargs['width']
+            if 'heigth' in kwargs:
+                self.height == kwargs['heigth']
+            if 'x' in kwargs:
+                self.x == kwargs['x']
+            if 'y' in kwargs:
+                self.y == kwargs['y']
 
     @property
     def width(self):
