@@ -2,7 +2,6 @@
 """define a new class rectangle inherits form Base"""
 
 
-from curses.textpad import rectangle
 from models.base import Base
 
 
@@ -65,7 +64,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dictionnary representation of a Rectangle"""
-        return(rectangle.__dict__)
+        return {"x": self.x, "y": self.y, "id": self.id, "height": self.height, "width": self.width}
 
     @property
     def width(self):
