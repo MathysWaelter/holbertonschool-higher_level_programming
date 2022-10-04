@@ -11,6 +11,11 @@ class Square(Rectangle):
         """retrieve __init__ from Rectangle Class"""
         super().__init__(size, size, x, y, id)
 
+    def __str__(self):
+        """retrieve __str__ from Rectangle Class"""
+        return"[Square] ({:d}) {:d}/{:d} - {:d}".format(
+            self.id, self.x, self.y, self.width)
+
     @property
     def size(self):
         """getter for size"""
@@ -21,11 +26,6 @@ class Square(Rectangle):
         """setter for size"""
         self.width = value
         self.height = value
-
-    def __str__(self):
-        """retrieve __str__ from Rectangle Class"""
-        return("[Square] ({:d}) {:d}/{:d} - {:d}".format
-               (self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """assign all args"""
