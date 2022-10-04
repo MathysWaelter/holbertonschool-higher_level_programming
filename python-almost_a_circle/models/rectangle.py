@@ -72,6 +72,7 @@ class Rectangle(Base):
                 self.y = args[4]
             except:
                 pass
+
     @property
     def width(self):
         """
