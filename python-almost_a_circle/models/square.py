@@ -7,11 +7,10 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """Square Class"""
-    
+
     def __init__(self, size, x=0, y=0, id=None):
         """retrieve __init__ from Rectangle Class"""
         super().__init__(size, size, x, y, id)
-        self.size = size
 
     @property
     def size(self):
@@ -27,7 +26,7 @@ class Square(Rectangle):
     def __str__(self):
         """retrieve __str__ from Rectangle Class"""
         return("[Square] ({}) {}/{} - {}".format
-               (self.id, self.x, self.y, self.size))
+               (self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
         """assign all args"""
