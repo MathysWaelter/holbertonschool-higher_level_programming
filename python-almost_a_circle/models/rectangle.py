@@ -2,6 +2,7 @@
 """define a new class rectangle inherits form Base"""
 
 
+from symbol import argument
 from models.base import Base
 
 
@@ -59,6 +60,24 @@ class Rectangle(Base):
         """function for display size of rectangle"""
         return("[Rectangle] ({}) {}/{} - {}/{}".format
                (self.id, self.__x, self.__y, self.__width, self.__height))
+
+    def define_update(self, id=None, width=None, height=None, x=None, y=None):
+        """args assignment"""
+        if id is not None:
+            self.id == id
+        if width is not None:
+            self.width == width
+        if height is not None:
+            self.height == height
+        if x is not None:
+            self.x == x
+        if y is not None:
+            self.y == y
+
+    def update(self, *args):
+        """assign an argument to each attribute with define_update function"""
+        if args:
+            self.define_update(*args)
 
     @property
     def width(self):
