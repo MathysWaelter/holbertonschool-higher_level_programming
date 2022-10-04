@@ -2,7 +2,6 @@
 """define a new class rectangle inherits form Base"""
 
 
-from symbol import argument
 from models.base import Base
 
 
@@ -74,15 +73,15 @@ class Rectangle(Base):
                 pass
         else:
             if 'id' in kwargs:
-                self.id == kwargs['id']
+                self.id = kwargs['id']
             if 'width' in kwargs:
-                self.width == kwargs['width']
+                self.width = kwargs['width']
             if 'heigth' in kwargs:
-                self.height == kwargs['heigth']
+                self.height = kwargs['heigth']
             if 'x' in kwargs:
-                self.x == kwargs['x']
+                self.x = kwargs['x']
             if 'y' in kwargs:
-                self.y == kwargs['y']
+                self.y = kwargs['y']
 
     @property
     def width(self):
