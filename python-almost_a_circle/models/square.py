@@ -15,4 +15,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """retrieve __str__ from Rectangle Class"""
-        return super().__str__()
+        return("[Square] ({}) {}/{} - {}".format
+               (self.id, self.x, self.y, self.size))
