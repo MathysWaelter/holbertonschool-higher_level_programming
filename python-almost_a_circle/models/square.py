@@ -4,7 +4,6 @@
 
 from models.rectangle import Rectangle
 
-
 class Square(Rectangle):
     """Square Class"""
 
@@ -25,7 +24,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """retrieve __str__ from Rectangle Class"""
-        return("[Square] ({}) {}/{} - {}".format
+        return("[Square] ({:d}) {:d}/{:d} - {:d}".format
                (self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
