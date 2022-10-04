@@ -2,39 +2,19 @@
 """define a new class rectangle inherits form Base"""
 
 
+from curses.textpad import rectangle
 from models.base import Base
 
 
 class Rectangle(Base):
     """Class inherits from SuperClass"""
-    __nb_objects = 0
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
-        if id is not None:
-            self.id = id
-        else:
-            type(self).__nb_objects += 1
-            self.id = Rectangle.__nb_objects
-        if type(width) != int:
-            raise TypeError("width must be an integer")
-        if width <= 0:
-            raise ValueError("width must be > 0")
-        if type(height) != int:
-            raise TypeError("height must be an integer")
-        if height <= 0:
-            raise ValueError("height must be > 0")
-        if type(x) != int:
-            raise TypeError("x must be an integer")
-        if x < 0:
-            raise ValueError("x must be >= 0")
-        if type(y) != int:
-            raise TypeError("y must be an integer")
-        if y < 0:
-            raise ValueError("y must be >= 0")
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     def area(self):
         """function for return the area of rectangle"""
@@ -82,6 +62,10 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        """dictionnary representation of a Rectangle"""
+        return(rectangle.__dict__)
 
     @property
     def width(self):
