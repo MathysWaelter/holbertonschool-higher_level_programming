@@ -2,6 +2,9 @@
 """main file for my project"""
 
 
+import json
+
+
 class Base:
     """main class"""
     __nb_objects = 0
@@ -12,3 +15,10 @@ class Base:
         else:
             type(self).__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(dict):
+        """Return Json string of a dict"""
+        if dict is None or len(dict) == 0:
+            return json.dumps([])
+        return json.dumps(dict)
