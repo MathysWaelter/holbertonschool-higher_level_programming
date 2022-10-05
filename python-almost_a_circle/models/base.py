@@ -20,5 +20,6 @@ class Base:
     def to_json_string(dict):
         """Return Json string of a dict"""
         if dict is None or len(dict) == 0:
-            return json.dumps([])
-        return json.dumps(dict)
+            return "[]"
+        else:
+            return json.dumps(dict)
