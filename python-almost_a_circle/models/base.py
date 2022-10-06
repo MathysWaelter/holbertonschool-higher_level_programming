@@ -38,3 +38,10 @@ class Base:
 
         with open(file, mode='w') as f:
             f.write(string_)
+        
+    @staticmethod
+    def from_json_string(json_string):
+        '''retrieve dict from json'''
+        if json_string is None or not json_string:
+            return []
+        return json.loads(json_string)
