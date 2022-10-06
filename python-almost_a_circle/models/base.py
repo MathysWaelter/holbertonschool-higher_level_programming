@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -45,3 +46,13 @@ class Base:
         if json_string is None or not json_string:
             return []
         return json.loads(json_string)
+
+    def create(cls, **dictionary):
+        """returns instance"""
+        if cls.__name__ == 'Rectangle':
+            obj = cls(1, 1)
+
+        if cls.__name__ == 'Square':
+            obj = cls(1)
+        obj.update(**dictionary)
+        return obj
