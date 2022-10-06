@@ -3,7 +3,7 @@
 
 
 import json
-import csv
+import os
 
 
 class Base:
@@ -55,5 +55,6 @@ class Base:
 
         if cls.__name__ == 'Square':
             obj = cls(1)
+
         obj.update(**dictionary)
         return obj
