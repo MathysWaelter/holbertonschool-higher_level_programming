@@ -38,7 +38,7 @@ class Base:
 
         with open(file, mode='w') as f:
             f.write(string_)
-        
+
     @staticmethod
     def from_json_string(json_string):
         '''retrieve dict from json'''
