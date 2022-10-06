@@ -50,11 +50,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """returns instance"""
-        if cls.__name__ == 'Rectangle':
-            obj = cls(1, 1)
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
 
-        if cls.__name__ == 'Square':
-            obj = cls(1)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
 
-        obj.update(**dictionary)
-        return obj
+        dummy.update(**dictionary)
+        return dummy
