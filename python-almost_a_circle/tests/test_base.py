@@ -48,3 +48,8 @@ class TestBase(unittest.TestCase):
         """Test with negative"""
         base = Base(-12)
         self.assertEqual(base.id, -12)
+    
+    def test7(self):
+        """Test with None"""
+        ret = Base.from_json_string(None)
+        self.assertEqual(ret, [])
