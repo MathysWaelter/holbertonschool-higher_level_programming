@@ -60,3 +60,14 @@ class TestRectangle(unittest.TestCase):
         dict = self.rect1.to_dictionary()
         self.assertEqual(
             {'x': 0, 'y': 0, 'id': 1, 'height': 9, 'width': 5}, dict)
+
+    def test9(self):
+        """test update with 2 case"""
+        rect1 = {'id': 56, 'width': 10, 'height': 10, 'x': 10, 'y': 10}
+        rect2 = {'id': 41, 'width': 10, 'height': 10, 'x': 10, 'y': 10}
+        rdct_create1 = Rectangle.create(**rect1)
+        rdct_create2 = Rectangle.create(**rect2)
+        self.assertEqual('[Rectangle] (56) 10/10 - 10/10', str(rdct_create1))
+        self.assertEqual('[Rectangle] (41) 10/10 - 10/10', str(rdct_create2))
+        self.assertTrue(isinstance(rect1, dict))
+        self.assertTrue(isinstance(rect2, dict))
