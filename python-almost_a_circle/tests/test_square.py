@@ -37,3 +37,17 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(
             "x must be >= 0",
             str(e.exception))
+
+    def test4(self):
+        """test for dict and update"""
+        Base._Base__nb_objects = 0
+
+        sqr1 = Square(9, 3, 2, 11)
+        sqr1_dictionary = sqr1.to_dictionary()
+        expected = {'id': 11, 'x': 3, 'size': 9, 'y': 2}
+        self.assertEqual(sqr1_dictionary, expected)
+
+        sqr1.update(10, 10, 10, 10)
+        sqr1_dictionary = sqr1.to_dictionary()
+        expected = {'id': 10, 'x': 10, 'size': 10, 'y': 10}
+        self.assertEqual(sqr1_dictionary, expected)
