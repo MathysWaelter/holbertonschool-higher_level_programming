@@ -6,7 +6,7 @@ import unittest
 from models.base import Base
 
 
-class TestBaseclass(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """ UnitTest for Base class"""
     def setUp(self):
         """ set base"""
@@ -31,13 +31,13 @@ class TestBaseclass(unittest.TestCase):
 
     def test5(self):
         """Test with float"""
-        base0 = Base(12.3)
-        self.assertEqual(base0.id, 12.3)
+        base = Base(12.3)
+        self.assertEqual(base.id, 12.3)
     
     def test6(self):
         """Test with string"""
-        base0 = Base({"test": "test"})
-        self.assertEqual(base0.id, {"test": "test"})*
+        base = Base({"test": "test"})
+        self.assertEqual(base.id, {"test": "test"})
 
     def test7(self):
         """Test with None"""
@@ -46,5 +46,5 @@ class TestBaseclass(unittest.TestCase):
 
     def test8(self):
         """Test with negative"""
-        base0 = Base(-12)
-        self.assertEqual(base0.id, -12)
+        base = Base(-12)
+        self.assertEqual(base.id, -12)
