@@ -71,3 +71,19 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual('[Rectangle] (41) 10/10 - 10/10', str(rdct_create2))
         self.assertTrue(isinstance(rect1, dict))
         self.assertTrue(isinstance(rect2, dict))
+
+    def test10(self):
+        """Test with str"""
+        with self.assertRaises(TypeError) as e:
+            r = Rectangle(27, "3")
+        self.assertEqual(
+            "height must be an integer",
+            str(e.exception))
+
+    def test11(self):
+        """Test with negative"""
+        with self.assertRaises(ValueError) as e:
+            r = Rectangle(27, -3)
+        self.assertEqual(
+            "height must be > 0",
+            str(e.exception))
