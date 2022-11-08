@@ -16,9 +16,9 @@ if __name__ == '__main__':
     password = sys.argv[2]
     database_name = sys.argv[3]
 
-    # CONNECT TO MY EXTERN DATABASE 
+    # CONNECT TO MY EXTERN DATABASE
     db = MySQLdb.connect(host='localhost', user=username, 
-                          passwd=password, db=database_name)
+                        passwd=password, db=database_name)
     # ITS A ABSTRACTION
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
