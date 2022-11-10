@@ -29,13 +29,13 @@ if __name__ == '__main__':
     # FOR REMAIMING TUPLE
     result = cur.fetchall()
 
-    # PRINT RESULT IN STRING 
+    # PRINT RESULT IN STRING
     citi = ""
     virgule = ""
     for x in result:
         citi = citi + virgule + x[0]
         virgule = ", "
-    print (citi)
+    print(citi)
 
     # Close all cursors
     cur.close()
