@@ -2,20 +2,22 @@
 """print state object that contains 'a'"""
 
 import sys
-from model_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import Session
+from model_state import Base, State
+
 
 if __name__ == "__main__":
-
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(sys.argv[1],
-                                  sys.argv[2],
-                                  sys.argv[3]),
-                           pool_pre_ping=True)
-    session = sessionmaker(bind=engine)()
-    result = session.query(State).all()
-    for row in result:
-        if 'a' in str(row):
-            print(row)
+    engine = create_engine(
+                            'mysql+mysqldb://{}:{}@localhost/{}'
+                            .format(sys.argv[1],
+                                    sys.argv[2],
+                                    sys.argv[3]),
+                            pool_pre_ping=True
+                                )
+    session = Session(engine)
+    match = '%a%'
+    re = session.query(State).filter(State.name.like(match)).order_by(State.id)
+    for x in re:
+        print("{}: {}".format(x.id, x.name))
     session.close()
