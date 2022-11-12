@@ -18,5 +18,4 @@ if __name__ == "__main__":
     for row in result:
         if 'a' in str(row):
             print(row)
-
     session.close()
