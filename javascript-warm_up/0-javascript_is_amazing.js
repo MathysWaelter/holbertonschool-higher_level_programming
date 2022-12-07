@@ -1,3 +1,4 @@
+#!/usr/bin/node
 /*
 Print var in console
 */
