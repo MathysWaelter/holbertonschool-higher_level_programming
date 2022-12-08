@@ -8,5 +8,5 @@ if (process.argv.length < 3) {
 } else if (process.argv.length === 3) {
   console.log('Argument found');
 } else {
-  console.log('Argument founds');
+  console.log('Argument found');
 }
