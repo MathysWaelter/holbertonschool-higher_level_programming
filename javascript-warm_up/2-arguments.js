@@ -3,8 +3,10 @@
 check if have argv
 */
 
-if (process.argv[2] === undefined) {
+if (process.argv.length < 3) {
   console.log('No argument');
-} else {
+} else if (process.argv.length === 3) {
   console.log('Argument found');
+} else {
+  console.log('Argument founds');
 }
