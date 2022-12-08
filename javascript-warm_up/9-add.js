@@ -4,8 +4,8 @@ add function
 */
 
 (function add (a, b) {
-  a = process.argv[2];
-  b = process.argv[3];
+  a = Number(process.argv[2]);
+  b = Number(process.argv[3]);
   if (isNaN(a) || isNaN(b)) {
     console.log(NaN);
   } else {
