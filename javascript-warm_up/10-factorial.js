@@ -3,9 +3,8 @@
 calcul factoriel
 */
 
-function fact (nbr) {
+function fact (facto) {
   let i;
-  let facto;
   let f = 1;
   for (i = 1; i <= facto; i++) {
     f = f * i;
