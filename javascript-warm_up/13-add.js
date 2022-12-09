@@ -4,6 +4,6 @@ add function
 */
 
 exports.add = function add (a, b) {
-    result = a + b;
-    return result;
-}
+  const result = a + b;
+  return result;
+};
