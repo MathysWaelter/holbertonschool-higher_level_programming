@@ -6,5 +6,4 @@ fs.writeFile(imput[2], imput[3], 'utf-8', function (doesntexist, txt) {
     if (doesntexist) {
         return console.log(doesntexist)
     }
-    console.log(txt);
 });
