@@ -4,5 +4,5 @@ const imput = process.argv;
 
 request(imput[2], function (doesntexist, status) {
   if (doesntexist) throw doesntexist;
-  console.log(status.statusCode);
+  console.log("code: ",status.statusCode);
 });
