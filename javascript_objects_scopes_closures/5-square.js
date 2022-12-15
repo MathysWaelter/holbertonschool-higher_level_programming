@@ -24,14 +24,13 @@ class Rectangle {
   double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
- }
+  }
 }
 class Square extends Rectangle {
-    constructor (hw) {
-        super(hw, hw);
-    }
- }
-
+  constructor (hw) {
+    super(hw, hw);
+  }
+}
 
 module.exports = Rectangle;
 module.exports = Square;
